@@ -1,0 +1,14 @@
+# Dependency folders (The biggest space-takers!)
+node_modules/
+
+# Build folders (Files generated when you "build" the app)
+build/
+dist/
+
+# Environment variables (Sensitive info like API keys)
+.env
+.env.local
+
+# System files
+.DS_Store
+Thumbs.db
