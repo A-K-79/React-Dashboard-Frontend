@@ -1,0 +1,152 @@
+.activity-list {
+  max-height: 450px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.activity-stats {
+  padding: 10px 12px;
+  background-color: var(--background-light);
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.activity-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  transition: all 0.2s ease;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.activity-item:hover {
+  background-color: #f8f9fa;
+  transform: translateX(5px);
+}
+
+.activity-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  flex-shrink: 0;
+  font-size: 18px;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.activity-content {
+  flex: 1;
+}
+
+.activity-action {
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.activity-meta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 11px;
+  color: var(--text-secondary);
+  flex-wrap: wrap;
+}
+
+.activity-meta span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.activity-user {
+  color: var(--primary-color);
+  font-weight: 500;
+  background-color: var(--primary-color + '10');
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.activity-time {
+  color: #888;
+}
+
+.activity-ip {
+  color: #999;
+  font-family: monospace;
+}
+
+.no-activities {
+  text-align: center;
+  color: #999;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.no-activities svg {
+  color: #ddd;
+  font-size: 48px;
+}
+
+.no-activities h3 {
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.no-activities p {
+  font-size: 14px;
+}
+
+/* Scrollbar Styling */
+.activity-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.activity-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.activity-list::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.activity-list::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+@media (max-width: 480px) {
+  .activity-meta {
+    gap: 10px;
+  }
+  
+  .activity-item {
+    padding: 10px;
+  }
+}
