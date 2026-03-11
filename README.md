@@ -1,2 +1,0 @@
-# React-Dashboard-Frontend
-Frontend
